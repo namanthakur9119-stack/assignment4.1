@@ -1,0 +1,189 @@
+# Assignment 4.1 — Student Registration Form
+
+## Question 1: Build the form inside a `<form>` tag.
+
+**Answer:**
+
+```html
+<form>
+    <!-- Form fields will be added here -->
+</form>
+```
+
+**Explanation:** The `<form>` tag is used to create a form that collects information from users.
+
+## Question 2: Add a proper `<label>` for each field.
+
+**Answer:**
+
+```html
+<label for="fullName">Full Name:</label>
+<input type="text" id="fullName" name="fullName">
+```
+
+**Explanation:** The `<label>` tag describes the purpose of an input field. Its `for` attribute should match the input's `id`.
+
+## Question 3: Use the correct input types.
+
+**Answer:**
+
+```html
+<input type="text" id="fullName" name="fullName">
+<input type="email" id="email" name="email">
+<input type="password" id="password" name="password">
+<input type="tel" id="phone" name="phone">
+<input type="number" id="age" name="age">
+```
+
+**Explanation:**
+
+* `text` — Accepts text such as a person's name.
+* `email` — Checks that the entered value has a valid email format.
+* `password` — Hides the entered password characters.
+* `tel` — Accepts a telephone number.
+* `number` — Accepts numerical values such as age.
+
+## Question 4: Give each input a unique `id` and meaningful `name`.
+
+**Answer:**
+
+```html
+<input type="text" id="fullName" name="fullName">
+<input type="email" id="email" name="email">
+<input type="password" id="password" name="password">
+```
+
+**Explanation:** The `id` uniquely identifies an element on the page. The `name` identifies the field when form data is submitted.
+
+## Question 5: Add `required` on mandatory fields.
+
+**Answer:**
+
+```html
+<input type="text" id="fullName" name="fullName" required>
+<input type="email" id="email" name="email" required>
+<input type="password" id="password" name="password" required>
+```
+
+**Explanation:** The `required` attribute prevents the browser from submitting the form when a mandatory field is empty.
+
+## Question 6: Complete the form with a submit button.
+
+**Answer:**
+
+```html
+<button type="submit">Register</button>
+```
+
+**Explanation:** The submit button attempts to submit the form after the browser checks its built-in validation rules.
+
+## Question 7: Create the complete Student Registration Form.
+
+**Answer:**
+
+Save this complete code as `registration.html`.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Registration Form</title>
+</head>
+
+<body>
+
+    <h1>Student Registration Form</h1>
+
+    <p>Please fill in the details below to register.</p>
+
+    <form action="#" method="post">
+
+        <!-- Full Name -->
+        <label for="fullName">Full Name:</label>
+        <input
+            type="text"
+            id="fullName"
+            name="fullName"
+            placeholder="Enter your full name"
+            autocomplete="name"
+            required
+        >
+
+        <br><br>
+
+        <!-- Email -->
+        <label for="email">Email:</label>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            autocomplete="email"
+            required
+        >
+
+        <br><br>
+
+        <!-- Password -->
+        <label for="password">Password:</label>
+        <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Create a password"
+            autocomplete="new-password"
+            required
+        >
+
+        <br><br>
+
+        <!-- Phone Number -->
+        <label for="phone">Phone Number:</label>
+        <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Enter your phone number"
+            autocomplete="tel"
+            required
+        >
+
+        <br><br>
+
+        <!-- Age -->
+        <label for="age">Age:</label>
+        <input
+            type="number"
+            id="age"
+            name="age"
+            placeholder="Enter your age"
+            min="1"
+            max="120"
+            required
+        >
+
+        <br><br>
+
+        <!-- Submit Button -->
+        <button type="submit">Register</button>
+
+    </form>
+
+</body>
+
+</html>
+```
+
+## Submission Requirements
+
+1. Save the file as `registration.html`.
+2. Open the file in a browser.
+3. Fill in the form fields and test the required-field validation.
+4. Take a screenshot of the working form.
+5. Submit `registration.html` and the screenshot.
+
+**Note:** This is a front-end form. The `action="#"` attribute does not store registration details in a database. Saving student data requires a suitable server or form-handling service.
